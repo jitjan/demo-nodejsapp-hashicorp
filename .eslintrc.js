@@ -11,7 +11,7 @@ module.exports = {
     },
     "rules": {
     },
-    "eslintIgnore" : [
+    "ignorePatterns" : [
         "node_modules",
         ".github"
     ]
