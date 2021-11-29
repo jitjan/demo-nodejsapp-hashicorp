@@ -6,7 +6,9 @@
     "node": "12"
   },
   "dependencies": {
-    "eslint": "^8.3.0",
     "prettier": "^2.5.0"
+  },
+  "devDependencies": {
+    "eslint": "^8.3.0"
   }
 }
