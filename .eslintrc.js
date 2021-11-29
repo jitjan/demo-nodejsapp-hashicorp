@@ -11,7 +11,7 @@ module.exports = {
     },
     "rules": {
     },
-    "ignorePatterns" : [
+    "ignorePatterns": [
         "node_modules",
         ".github"
     ]

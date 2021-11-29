@@ -1,14 +1,14 @@
 var http = require("http"),
-    fs = require("fs"),
-    vaultDir = "/application/vault/",
-    showVault = process.env.SHOW_VAULT,
-    vaultFiles = process.env.VAULT_FILES,
-    vaultSecret = process.env.SECRET_KEY,
-    files = [],
-    port = 8888;
+  fs = require("fs"),
+  vaultDir = "/application/vault/",
+  showVault = process.env.SHOW_VAULT,
+  vaultFiles = process.env.VAULT_FILES,
+  vaultSecret = process.env.SECRET_KEY,
+  files = [],
+  port = 8888;
 
 function handleRequest(req, res) {
-  res.writeHead(200, {"Content-type":"text/html"});
+  res.writeHead(200, { "Content-type": "text/html" });
   res.write("Hello, World! This is Node.js app v100.");
 
   // Only show Vault files if the SHOW_VAULT KV is set to true in Consul
@@ -16,7 +16,7 @@ function handleRequest(req, res) {
     files = fs.readdirSync(vaultDir);
 
     for (var i = 0; i < files.length; i++) {
-      file = files[i];
+      let file = files[i];
 
       // Only show this file if included in the VAULT_FILES KV in Consul
       if (vaultFiles && vaultFiles.indexOf(file) > -1) {
@@ -39,4 +39,4 @@ function test() {
   console.log("hello" + str);
 }
 
-test(); 
+test();
