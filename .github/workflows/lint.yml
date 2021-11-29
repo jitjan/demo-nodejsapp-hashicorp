@@ -6,11 +6,9 @@ on:
   push:
     branches:
       - main
-      - test
   pull_request:
     branches:
       - main
-      - test
 
 jobs:
   run-linters:
@@ -26,4 +24,6 @@ jobs:
       - name: Run linters
         uses: wearerequired/lint-action@v1
         with:
-          runs-on: self-hosted
+          - name: Lint Action
+          uses: wearerequired/lint-action@v1.10.0
+
