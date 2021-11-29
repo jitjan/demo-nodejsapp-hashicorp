@@ -10,5 +10,9 @@ module.exports = {
         "ecmaVersion": 13
     },
     "rules": {
-    }
+    },
+    "excludes" : [
+        "node_modules",
+        ".github/**/**"
+    ]
 };
