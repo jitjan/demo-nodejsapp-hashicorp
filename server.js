@@ -12,7 +12,11 @@ function handleRequest(req, res) {
   res.write("Hello, World! This is Node.js app v100.");
 
   // Only show Vault files if the SHOW_VAULT KV is set to true in Consul
-  if (fs.existsSync(vaultDir) && showVault && (showVault.toUpperCase() === "TRUE" || showVault === "1")) {
+  if (
+    fs.existsSync(vaultDir) &&
+    showVault &&
+    (showVault.toUpperCase() === "TRUE" || showVault === "1")
+  ) {
     files = fs.readdirSync(vaultDir);
 
     for (var i = 0; i < files.length; i++) {
