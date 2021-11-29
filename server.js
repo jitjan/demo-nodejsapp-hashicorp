@@ -39,4 +39,4 @@ function test() {
   console.log("hello" + str);
 }
 
-test();
+test(); 
